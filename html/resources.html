@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - EduLearn</title>
+    <link rel="stylesheet" href="../css/resources.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">EduLearn</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Resources Section -->
+    <section class="resources-container">
+        <h1>Resources</h1>
+        <div class="resource-list">
+            <div class="resource-item">
+                <h2>PDFs</h2>
+                <p>Access a wide range of educational PDFs.</p>
+                <button class="get-button" onclick="showResourceForm('PDFs')">Get</button>
+            </div>
+            <div class="resource-item">
+                <h2>Books</h2>
+                <p>Find and download books for your courses.</p>
+                <button class="get-button" onclick="showResourceForm('Books')">Get</button>
+            </div>
+            <div class="resource-item">
+                <h2>Past Papers</h2>
+                <p>Get access to past exam papers for revision.</p>
+                <button class="get-button" onclick="showResourceForm('Past Papers')">Get</button>
+            </div>
+        </div>
+
+        <!-- Resource Request Form (Hidden by Default) -->
+        <div id="resource-form-container" style="display: none;">
+            <form id="resource-form" onsubmit="return validateResourceForm()">
+                <h3>Request Resource</h3>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="intake-year">Intake Year:</label>
+                <input type="text" id="intake-year" name="intake-year" required>
+
+                <label for="resource-name">Resource Name:</label>
+                <input type="text" id="resource-name" name="resource-name" readonly>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="confirm-email">Confirm Email:</label>
+                <input type="email" id="confirm-email" name="confirm-email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EduLearn. All rights reserved.</p>
+    </footer>
+
+    <div id="popup-container"></div>
+
+    <script src="../js/resources.js"></script>
+</body>
+
+</html>

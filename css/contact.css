@@ -1,0 +1,187 @@
+/* Contact Us Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeff5; /* Lighter background for a softer look */
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    margin: 80px auto 20px;
+    padding: 40px;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container:hover {
+    transform: scale(1.02); 
+}
+
+.contact-container h1 {
+    text-align: center;
+    font-size: 30px; 
+    color: #2c3e50; 
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1.5px; /* Increased letter spacing */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+.contact-details {
+    flex: 1;
+    margin-right: 30px; /* Increased right margin */
+}
+
+.contact-details h2 {
+    font-size: 34px; /* Slightly larger font size */
+    color: #34495e; /* Darker text color */
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    color: #7f8c8d; /* Softer text color */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    font-size: 18px;
+    color: #95a5a6; /* Slightly lighter text color */
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px; /* Padding for icon placement */
+}
+
+.contact-details ul li::before {
+    content: '\f00c'; /* Font Awesome check icon */
+    font-family: FontAwesome;
+    color: #e74c3c; /* Red icon color */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h2 {
+    font-size: 34px; /* Slightly larger font size */
+    color: #34495e; /* Darker text color */
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Larger border radius */
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #3498db; /* Blue focus color */
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button {
+    background-color: #e74c3c; /* Red button color */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Increased padding for a more prominent button */
+    font-size: 18px;
+    border-radius: 8px; /* Larger border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.map {
+    margin-top: 30px; /* Increased margin for better spacing */
+}
+
+.map h2 {
+    font-size: 34px; /* Slightly larger font size */
+    color: #34495e; /* Darker text color */
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 10px; /* Larger border radius for iframe */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for iframe */
+}
+
+.input-error {
+    border-color: #e5533c;
+}
+
+.error-message {
+    color: #e5533c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.popup-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-message::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #4caf50 transparent;
+}

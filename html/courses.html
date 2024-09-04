@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduLearn</title>
+    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">EduLearn</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Courses Section -->
+    <section class="courses-container">
+        <h2>Available Courses</h2>
+        <div class="course-box">
+            <img src="../images/course1.jpg" alt="Course 1">
+            <h3>Web Development</h3>
+            <p>Learn the fundamentals of WD, from HTML to advanced JavaScript.</p>
+            <button class="view-more" onclick="showDetails(this)">View More</button>
+            <div class="extra-info">
+                <p>Price: $200</p>
+                <p>Duration: 3 months</p>
+                <p>Instructor: John Doe</p>
+                <button class="register-button" onclick="showRegisterForm(this)">Register</button>
+            </div>
+            <div class="register-form">
+                <h3>Register for Web Development</h3>
+                <form onsubmit="return validateForm(this)">
+                    <input type="hidden" name="course-name" value="Web Development">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                    <label for="province">Province:</label>
+                    <input type="text" id="province" name="province" required>
+                    <label for="home-address">Home Address:</label>
+                    <input type="text" id="home-address" name="home-address" required>
+                    <label for="postal-code">Postal Code:</label>
+                    <input type="text" id="postal-code" name="postal-code" required>
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="text" id="phone-number" name="phone-number" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- Repeat similar structure for other courses -->
+        <!-- Other course example -->
+        <div class="course-box">
+            <img src="../images/course2.jpg" alt="Course 2">
+            <h3>Data Science</h3>
+            <p>Learn the basics of data science, from data wrangling to machine learning.</p>
+            <button class="view-more" onclick="showDetails(this)"> View More </button>
+            <div class="extra-info">
+                <p>Price: $250</p>
+                <p>Duration: 4 months</p>
+                <p>Instructor: Jane Smith</p>
+                <button class="register-button" disabled>Register</button> <!-- Disabled register button -->
+            </div>
+        </div>
+        <div class="course-box">
+            <img src="../images/course3.jpg" alt="Course 2">
+            <h3>Graphic Design </h3>
+            <p>Learn the basics of Design, get into the design world. Boost your knowledge. </p>
+            <button class="view-more" onclick="showDetails(this)"> View More </button>
+            <div class="extra-info">
+                <p>Price: $250</p>
+                <p>Duration: 4 months</p>
+                <p>Instructor: Jane Smith</p>
+                <button class="register-button" disabled>Register</button> <!-- Disabled register button -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup message container -->
+    <div id="popup-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EduLearn. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/courses.js"></script>
+</body>
+</html>
